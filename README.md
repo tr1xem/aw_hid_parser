@@ -4,15 +4,14 @@ Simple and incomplete HID RGB report parser for Alienware laptops.
 
 ## Usage
 
-Feed a file with a list of HID reports through stdin, e.g.
+Install the dependencies:
 
 ```
-./aw_hid_parser < reports.txt
+uv sync
 ```
 
-Where `reports.txt` is formated like:
+Feed a pcapng file with a list of HID reports through stdin, e.g.
 
 ```
-03 21 00 01 ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-03 23 01 00 01 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+uv run python main.py /path/to/alienware-rgb-hid-report.pcapng
 ```
